@@ -4,5 +4,5 @@ Portfolio website made with React. Its a project, which I want to turn into a fu
 
 Project tech stack:
 - scss
--js
--react
+- js
+- react
