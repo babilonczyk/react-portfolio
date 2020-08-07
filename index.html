@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html style="overflow-x: hidden;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jan Piotrzkowski - Portfolio</title>
+    <meta name="description" content="Jan Piotrzkowski's portfolio website.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/scss/main.scss">
+
+     <!-- React + ReactDOM-->
+     <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+</head>
+
+<body>
+
+    <nav>
+        <h1>JP</h1>
+        <div class="navbar-links-dropdown">
+
+            <i class="im im-menu navbar-links-dropdown-btn" id="btn-1" role="button" onclick="hideShowOption()"></i>
+            <i class="im im-x-mark navbar-links-dropdown-btn" id="btn-2" role="button" style="display: none;" onclick="hideShowOption()"></i>
+
+            <div id="navbar-links-dropdown-content">
+                <a href="#link1">About Me</a>
+                <a href="#link2">Tech Stack</a>
+                <a href="#link3">Projects</a>
+                <a href="#link4">Contacts</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="root"></div>
+
+<!-- 
+       <div className="tech">
+                                <img src="assets/img/devicons/icons8-html-5.svg" alt="" />
+                                <span>Html</span>
+                            </div>
+
+                            <div className="tech">
+                                <img src="assets/img/devicons/icons8-css3.svg" alt="" />
+                                <span>Css</span>
+                            </div>
+                            <div className="tech">
+                                <img src="assets/img/devicons/icons8-javascript.svg" alt="" />
+                                <span>Javascript</span>
+                            </div>
+                            <div className="tech">
+                                <img src="assets/img/devicons/icons8-ruby-programming-language.svg" alt="" />
+                                <span>Ruby</span>
+                            </div>
+
+                            <div className="tech">
+                                <img src="assets/img/devicons/icons8-react-native.svg" alt="" />
+                                <span>React</span>
+                            </div>
+                            <div className="tech">
+                                <img src="assets/img/devicons/icons8-sass.svg" alt="" />
+                                <span>Scss</span>
+                            </div>
+                            <div className="tech">
+                                <img src="assets/img/devicons/ror.png" alt="" />
+                                <span>RoR</span>
+                            </div>
+                            
+
+                            <div className="tech">
+                                <img src="assets/img/devicons/rpsec.png" alt="" />
+                                <span>RSpec</span>
+                            </div>
+                            <div className="tech">
+                                <img src="assets/img/devicons/jest.svg" alt="" />
+                                <span>Jest</span>
+                            </div>
+
+                            <div className="tech">
+                                <img src="assets/img/devicons/enzyme.png" alt="" />
+                                <span>Enzyme</span>
+                            </div>
+
+                            <div className="tech">
+                                <img src="assets/img/devicons/sinon.png" alt="" />
+                                <span>Sinon</span>
+                            </div>
+
+                            <div className="tech">
+                                <img src="assets/img/devicons/icons8-postgresql.svg" alt="" />
+                                <span>PostgreSQL</span>
+                            </div>
+-->
+
+    <script src="app.js"></script>
+    
+</body>
+
+<script type="text/javascript" charset="utf-8">
+
+    function hideShowOption() {
+
+        var x  = document.querySelector('#navbar-links-dropdown-content');
+
+        if(x.style.display === 'none' || x.style.display === '') {
+
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+
+        var b1  = document.querySelector('#btn-1');
+        var b2  = document.querySelector('#btn-2');
+
+        if(b2.style.display === 'none' || b2.style.display === '') {
+            b2.style.display = "block";
+            b1.style.display = "none";
+        } else {
+            b1.style.display = "block";
+            b2.style.display = "none";
+        }
+
+    }
+
+    // The function actually applying the offset
+    function offsetAnchor() {
+        if(location.hash.length !== 0) {
+            window.scrollTo(window.scrollX, window.scrollY - 80);
+        }
+    }
+
+    // This will capture hash changes while on the page
+    window.addEventListener("hashchange", offsetAnchor);
+
+    // This is here so that when you enter the page with a hash,
+    // it can provide the offset in that case too. Having a timeout
+    // seems necessary to allow the browser to jump to the anchor first.
+    window.setTimeout(offsetAnchor, 1);
+</script>
+
+</html>

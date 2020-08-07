@@ -1,0 +1,24 @@
+{
+  "name": "tiptopsite-template-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    ":scss": "node-sass --watch assets/scss/ -o assets/css",
+    ":babel": "npx babel --watch src --out-dir . --presets react-app/prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tiptopsite/Tiptopsite.git"
+  },
+  "author": "Jan Piotrzkowski",
+  "license": "ISC",
+  "homepage": "https://tiptopsite.net/",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2",
+    "node-sass": "^4.13.1",
+    "react-icons": "^3.10.0"
+  }
+}
