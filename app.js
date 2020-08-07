@@ -13,10 +13,11 @@ var jest = "assets/img/devicons/jest.svg";
 var js = "assets/img/devicons/js.svg";
 var react = "assets/img/devicons/react-native.svg";
 var ror = "assets/img/devicons/ror.png";
-var rspec = "assets/img/devicons/rspec.png";
+var rspec = "assets/img/devicons/rpsec.png";
 var scss = "assets/img/devicons/sass.svg";
 var ruby = "assets/img/devicons/ruby.svg";
 var sinon = "assets/img/devicons/sinon.png";
+var pg = "assets/img/devicons/postgresql.svg";
 
 var StackTech = function (_React$Component) {
     _inherits(StackTech, _React$Component);
@@ -165,7 +166,27 @@ var Content = function (_React$Component4) {
                 React.createElement(
                     "section",
                     { className: "techs" },
-                    React.createElement("div", { className: "content-techs" })
+                    React.createElement(
+                        "p",
+                        null,
+                        "This is the technological stack I want to work in and keep improving."
+                    ),
+                    React.createElement(
+                        "div",
+                        { className: "content-techs" },
+                        React.createElement(StackTech, { tech: html, name: "Html" }),
+                        React.createElement(StackTech, { tech: css, name: "Css3" }),
+                        React.createElement(StackTech, { tech: js, name: "Javascript" }),
+                        React.createElement(StackTech, { tech: ruby, name: "Ruby" }),
+                        React.createElement(StackTech, { tech: react, name: "React" }),
+                        React.createElement(StackTech, { tech: ror, name: "Rails" }),
+                        React.createElement(StackTech, { tech: scss, name: "Scss" }),
+                        React.createElement(StackTech, { tech: rspec, name: "Rspec" }),
+                        React.createElement(StackTech, { tech: jest, name: "Jest" }),
+                        React.createElement(StackTech, { tech: enzyme, name: "Enzyme" }),
+                        React.createElement(StackTech, { tech: sinon, name: "Sinon" }),
+                        React.createElement(StackTech, { tech: pg, name: "Postgresql" })
+                    )
                 ),
                 React.createElement(
                     "div",
@@ -187,7 +208,8 @@ var Content = function (_React$Component4) {
                     React.createElement(
                         "div",
                         { className: "content-projects" },
-                        React.createElement(Project, { img: "assets/img/projects/tiptopsite.png", name: "Tiptopsite.net", techs: [html, css, js, scss] })
+                        React.createElement(Project, { img: "assets/img/projects/tiptopsite.png", name: "Tiptopsite.net", techs: [html, css, js, scss] }),
+                        React.createElement(Project, { img: "assets/img/projects/portfolio.png", name: "My Portfolio", techs: [html, scss, js, react] })
                     ),
                     React.createElement(
                         "h3",

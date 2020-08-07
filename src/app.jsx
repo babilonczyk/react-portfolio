@@ -1,5 +1,3 @@
-
-
 const html = "assets/img/devicons/html.svg"
 const css = "assets/img/devicons/css3.svg"
 const enzyme = "assets/img/devicons/enzyme.png"
@@ -7,10 +5,12 @@ const jest = "assets/img/devicons/jest.svg"
 const js = "assets/img/devicons/js.svg"
 const react = "assets/img/devicons/react-native.svg"
 const ror = "assets/img/devicons/ror.png"
-const rspec = "assets/img/devicons/rspec.png"
+const rspec = "assets/img/devicons/rpsec.png"
 const scss = "assets/img/devicons/sass.svg"
 const ruby = "assets/img/devicons/ruby.svg"
 const sinon = "assets/img/devicons/sinon.png"
+const pg = "assets/img/devicons/postgresql.svg"
+
 
 class StackTech extends React.Component {
     
@@ -85,7 +85,6 @@ class Content extends React.Component {
     }
 
     
-
     render() {
 
         const clear = `
@@ -93,8 +92,6 @@ class Content extends React.Component {
                             clear: both;
                         }
                     `
-
-
 
         return   <React.Fragment>
                     <section className="parallax-img parallax-img--one"> 
@@ -113,9 +110,22 @@ class Content extends React.Component {
                     
                     <section className="techs">
 
+                        <p>This is the technological stack I want to work in and keep improving.</p>
+
                         <div className="content-techs">
 
-                         
+                            <StackTech tech={html} name="Html" />
+                            <StackTech tech={css} name="Css3" />
+                            <StackTech tech={js} name="Javascript" />
+                            <StackTech tech={ruby} name="Ruby" />
+                            <StackTech tech={react} name="React" />
+                            <StackTech tech={ror} name="Rails" />
+                            <StackTech tech={scss} name="Scss" />
+                            <StackTech tech={rspec} name="Rspec" />
+                            <StackTech tech={jest} name="Jest" />
+                            <StackTech tech={enzyme} name="Enzyme" />
+                            <StackTech tech={sinon} name="Sinon" />
+                            <StackTech tech={pg} name="Postgresql" />
 
                         </div>
                     </section>
@@ -129,6 +139,7 @@ class Content extends React.Component {
                         <div className="content-projects">
 
                             <Project img="assets/img/projects/tiptopsite.png" name="Tiptopsite.net" techs={[html, css, js, scss]}/>
+                            <Project img="assets/img/projects/portfolio.png" name="My Portfolio" techs={[html, scss, js, react]}/>
 
                         </div>
 
@@ -160,7 +171,6 @@ class Content extends React.Component {
     }
 } 
  
-
 
 ReactDOM.render(
     <Content />,

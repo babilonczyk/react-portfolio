@@ -83,6 +83,11 @@ nav {
   background-color: #fff;
   width: calc(100%-80px);
   padding: 0 20px; }
+  .techs p {
+    margin: 15px auto 20px auto;
+    max-width: 800px;
+    width: calc(100% - 40px);
+    font-size: 13px; }
   .techs .content-techs {
     display: block;
     margin: 15px auto 0 auto;
