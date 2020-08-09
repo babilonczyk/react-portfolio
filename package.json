@@ -7,6 +7,7 @@
     "npm": "6.14.4",
     "node": "12.16.1"
   },
+  "root": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     ":scss": "node-sass --watch assets/scss/ -o assets/css",
