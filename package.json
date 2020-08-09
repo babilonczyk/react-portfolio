@@ -17,7 +17,7 @@
     "url": "git+https://github.com/babilonczyk/react-portfolio.git"
   },
   "author": "Jan Piotrzkowski",
-  "homepage": "http://babilonczyk.github.io/babilonczyk",
+  "homepage": "http://babilonczyk.github.io/react-portfolio",
   "license": "ISC",
   "dependencies": {
     "babel-cli": "^6.26.0",
