@@ -6,7 +6,7 @@ html{
 }
 
 body{
-  margin: 0;
+  margin: 0; 
   padding: 0;
   font-family: 'Lato', sans-serif;
   background-color: #fff;
@@ -151,25 +151,23 @@ nav{
         padding: 3px;
         transform: translate(-50%, -50%);
       }
-    }
+    } 
   }
-}
+} 
 
 .parallax-img{
   height: 693px;
-  width: 100%;
+  width: 100%; 
   background-attachment: fixed;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; 
   background-size: cover;
   position: relative;
-  background-image: url("../../assets/img/img1.jpg");
   margin: 60px 0 0 0;
 
-
-  h2{
+  h2{ 
     position: absolute;
-    width: auto;
+    width: auto; 
     font-size: 30px;
     color: rgba(255, 255, 255, 0.95);
     margin: 0;

@@ -129,7 +129,6 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  background-image: url("../../assets/img/img1.jpg");
   margin: 60px 0 0 0; }
   .parallax-img h2 {
     position: absolute;

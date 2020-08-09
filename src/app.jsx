@@ -1,22 +1,30 @@
-const html = "assets/img/devicons/html.svg"
-const css = "assets/img/devicons/css3.svg"
-const enzyme = "assets/img/devicons/enzyme.png"
-const jest = "assets/img/devicons/jest.svg"
-const js = "assets/img/devicons/js.svg"
-const react = "assets/img/devicons/react-native.svg"
-const ror = "assets/img/devicons/ror.png"
-const rspec = "assets/img/devicons/rpsec.png"
-const scss = "assets/img/devicons/sass.svg"
-const ruby = "assets/img/devicons/ruby.svg"
-const sinon = "assets/img/devicons/sinon.png"
-const pg = "assets/img/devicons/postgresql.svg"
-const redux = "assets/img/devicons/redux.svg"
-const github = "assets/img/devicons/github.svg"
+import React from 'react';
+import './css/main.css';
 
-const play = "assets/img/play.png"
+import html from "./img/devicons/html.svg";
+import css from "./img/devicons/css3.svg";   
+import enzyme from "./img/devicons/enzyme.png";
+import jest from "./img/devicons/jest.svg";
+import js from "./img/devicons/js.svg";
+import react from "./img/devicons/react-native.svg";
+import ror from "./img/devicons/ror.png";
+import rspec from "./img/devicons/rpsec.png";
+import scss from "./img/devicons/sass.svg";
+import ruby from "./img/devicons/ruby.svg"; 
+import sinon from "./img/devicons/sinon.png"; 
+import pg from "./img/devicons/postgresql.svg";
+import redux from "./img/devicons/redux.svg";
+import github from "./img/devicons/github.svg";
+import play from "./img/play.png";
+
+import p_tiptop from "./img/projects/tiptopsite.png";
+import p_portfolio from "./img/projects/portfolio.png";
+
+import background_img from "./img/img1.jpg";
 
 
-class StackTech extends React.Component {
+
+class StackTech extends React.Component { 
     
     constructor(props) {
         super(props);
@@ -30,7 +38,6 @@ class StackTech extends React.Component {
     }
 
 }
-
 
 class ProjectTech extends React.Component {
     
@@ -66,16 +73,17 @@ class Project extends React.Component {
         });
 
         let hrefs = this.props.links;
+        let links;
 
-        if(this.props.links.length == 2)
-            var links = <div className="links links--two"> 
-                            <a href={hrefs[0]}><span>demo</span> <img src={play}/></a>
-                            <a href={hrefs[1]}><span>github</span> <img src={github}/></a>
-                        </div>
-        else if (this.props.links.length == 1)
-             var links = <div className="links links--one"> 
-                            <a href={hrefs[0]}><span>demo</span> <img src={play}/></a>
-                         </div>
+        if(this.props.links.length === 2)
+            links = <div className="links links--two"> 
+                        <a href={hrefs[0]}><span>demo</span> <img src={play}/></a>
+                        <a href={hrefs[1]}><span>github</span> <img src={github}/></a>
+                    </div>
+        else if (this.props.links.length === 1)
+            links = <div className="links links--one"> 
+                        <a href={hrefs[0]}><span>demo</span> <img src={play}/></a>
+                    </div>
          
          
         return  <div className="project"> 
@@ -95,7 +103,7 @@ class Project extends React.Component {
 
 
 
-class Content extends React.Component {
+class App extends React.Component {
 
     constructor(props) {
         super(props);
@@ -103,15 +111,19 @@ class Content extends React.Component {
 
     
     render() {
-
+ 
         const clear = `
                         .clear {
                             clear: both;
                         }
                     `
-
+      
+        var parallax = {
+            backgroundImage: `url(${background_img})`
+        };
+ 
         return   <React.Fragment>
-                    <section className="parallax-img parallax-img--one"> 
+                    <section style={parallax} className="parallax-img parallax-img--one"> 
                         <h2>Jan Piotrzkowski</h2>
                     </section>
 
@@ -156,12 +168,12 @@ class Content extends React.Component {
 
                         <div className="content-projects">
  
-                            <Project links={["https://tiptopsite.net/", "https://tiptopsite.net/"]} img="assets/img/projects/tiptopsite.png" name="Tiptopsite.net" techs={[html, css, js, scss]}/>
-                            <Project links={["https://tiptopsite.net/"]} img="assets/img/projects/portfolio.png" name="My Portfolio" techs={[html, scss, js, react]}/>
-                            <Project links={["https://tiptopsite.net/"]} img="assets/img/projects/portfolio.png" name="Ruby Blackjack" techs={[ ruby, rspec]}/>
-                            <Project links={["https://tiptopsite.net/"]} img="assets/img/projects/portfolio.png" name="Joker Flashcards" techs={[react, redux, jest, enzyme]}/>
-                            <Project links={["https://tiptopsite.net/"]} img="assets/img/projects/portfolio.png" name="Guess Game" techs={[react, redux, jest, enzyme,sinon]}/>
-                            <Project links={["https://tiptopsite.net/"]} img="assets/img/projects/portfolio.png" name="Interview Prep" techs={[ror, ruby, rspec, react]}/>
+                            <Project links={["https://tiptopsite.net/", "https://tiptopsite.net/"]} img={p_tiptop} name="Tiptopsite.net" techs={[html, css, js, scss]}/>
+                            <Project links={["https://tiptopsite.net/"]} img={p_portfolio} name="My Portfolio" techs={[html, scss, js, react]}/>
+                            <Project links={["https://tiptopsite.net/"]} img={p_portfolio} name="Ruby Blackjack" techs={[ ruby, rspec]}/>
+                            <Project links={["https://tiptopsite.net/"]} img={p_portfolio} name="Joker Flashcards" techs={[react, redux, jest, enzyme]}/>
+                            <Project links={["https://tiptopsite.net/"]} img={p_portfolio} name="Guess Game" techs={[react, redux, jest, enzyme,sinon]}/>
+                            <Project links={["https://tiptopsite.net/"]} img={p_portfolio} name="Interview Prep" techs={[ror, ruby, rspec, react]}/>
  
                         </div>
  
@@ -171,7 +183,7 @@ class Content extends React.Component {
 
                     <h1 id="link4"class="section-title">Do you want to contact me? 🙈</h1>
 
-                    <section class="contact">
+                    <section class="contact"> 
 
                         <div class="content-contact">
 
@@ -193,8 +205,4 @@ class Content extends React.Component {
     }
 } 
  
-
-ReactDOM.render(
-    <Content />,
-    document.getElementById('root')
-);
+export default App;
