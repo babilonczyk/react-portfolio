@@ -10,6 +10,10 @@ const scss = "assets/img/devicons/sass.svg"
 const ruby = "assets/img/devicons/ruby.svg"
 const sinon = "assets/img/devicons/sinon.png"
 const pg = "assets/img/devicons/postgresql.svg"
+const redux = "assets/img/devicons/redux.svg"
+const github = "assets/img/devicons/github.svg"
+
+const play = "assets/img/play.png"
 
 
 class StackTech extends React.Component {
@@ -61,17 +65,30 @@ class Project extends React.Component {
             );
         });
 
-        return  <div className="project">
+        let hrefs = this.props.links;
+
+        if(this.props.links.length == 2)
+            var links = <div className="links links--two"> 
+                            <a href={hrefs[0]}><span>demo</span> <img src={play}/></a>
+                            <a href={hrefs[1]}><span>github</span> <img src={github}/></a>
+                        </div>
+        else if (this.props.links.length == 1)
+             var links = <div className="links links--one"> 
+                            <a href={hrefs[0]}><span>demo</span> <img src={play}/></a>
+                         </div>
+         
+         
+        return  <div className="project"> 
                     <div className="project-img">
                         <img src={img} alt="" />
-                        <div className="project-links"></div>
+                        <div className="project-links">{links}</div>
                     </div>
                     <h5 className="project-title">{name}</h5>
 
                     <div className="project-stack"> 
                         {techs}
                     </div>
-                </div>
+                </div> 
     }
 
 }
@@ -119,11 +136,12 @@ class Content extends React.Component {
                             <StackTech tech={js} name="Javascript" />
                             <StackTech tech={ruby} name="Ruby" />
                             <StackTech tech={react} name="React" />
+                            <StackTech tech={redux} name="Redux" />
                             <StackTech tech={ror} name="Rails" />
-                            <StackTech tech={scss} name="Scss" />
+                            <StackTech tech={scss} name="Scss" />  
                             <StackTech tech={rspec} name="Rspec" />
                             <StackTech tech={jest} name="Jest" />
-                            <StackTech tech={enzyme} name="Enzyme" />
+                            <StackTech tech={enzyme} name="Enzyme" /> 
                             <StackTech tech={sinon} name="Sinon" />
                             <StackTech tech={pg} name="Postgresql" />
 
@@ -137,13 +155,17 @@ class Content extends React.Component {
                     <section className="projects">
 
                         <div className="content-projects">
-
-                            <Project img="assets/img/projects/tiptopsite.png" name="Tiptopsite.net" techs={[html, css, js, scss]}/>
-                            <Project img="assets/img/projects/portfolio.png" name="My Portfolio" techs={[html, scss, js, react]}/>
-
+ 
+                            <Project links={["https://tiptopsite.net/", "https://tiptopsite.net/"]} img="assets/img/projects/tiptopsite.png" name="Tiptopsite.net" techs={[html, css, js, scss]}/>
+                            <Project links={["https://tiptopsite.net/"]} img="assets/img/projects/portfolio.png" name="My Portfolio" techs={[html, scss, js, react]}/>
+                            <Project links={["https://tiptopsite.net/"]} img="assets/img/projects/portfolio.png" name="Ruby Blackjack" techs={[ ruby, rspec]}/>
+                            <Project links={["https://tiptopsite.net/"]} img="assets/img/projects/portfolio.png" name="Joker Flashcards" techs={[react, redux, jest, enzyme]}/>
+                            <Project links={["https://tiptopsite.net/"]} img="assets/img/projects/portfolio.png" name="Guess Game" techs={[react, redux, jest, enzyme,sinon]}/>
+                            <Project links={["https://tiptopsite.net/"]} img="assets/img/projects/portfolio.png" name="Interview Prep" techs={[ror, ruby, rspec, react]}/>
+ 
                         </div>
-
-                        <h3>Visit my <a href="">github</a> for more of my works.</h3>
+ 
+                        <h3>Visit my <a target="_blank" href="https://github.com/babilonczyk">github</a> for more of my works.</h3>
 
                     </section>
 
@@ -156,8 +178,8 @@ class Content extends React.Component {
                             <h3>Reach out to me via email: <strong>piotrzkowski.jan@gmail.com</strong></h3>
 
                             <h4>Please start its title with "[Portfolio] ..."&emsp; or follow me on
-                                &emsp;<a href="">github</a>
-                                &emsp;<a href="">linkedin</a>
+                                &emsp;<a target="_blank" href="https://github.com/babilonczyk">github</a>
+                                &emsp;<a target="_blank" href="https://pl.linkedin.com/public-profile/in/jan-piotrzkowski-3a8789158">linkedin</a>
                             </h4>
 
                         </div>

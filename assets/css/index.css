@@ -223,13 +223,14 @@ nav {
     grid-auto-rows: 230px;
     column-gap: 15px;
     row-gap: 20px; }
-    @media only screen and (max-width: 700px) {
+    @media only screen and (max-width: 800px) {
       .projects .content-projects {
         grid-template-columns: 1fr 1fr; } }
-    @media only screen and (max-width: 500px) {
+    @media only screen and (max-width: 545px) {
       .projects .content-projects {
         grid-template-columns: 1fr;
-        grid-auto-rows: 270px; } }
+        grid-auto-rows: 280px;
+        row-gap: 30px; } }
     .projects .content-projects .project {
       display: grid;
       grid-template-rows: 150px 35px 40px; }
@@ -239,9 +240,12 @@ nav {
       .projects .content-projects .project .project-img {
         background-color: fff;
         border: 1px solid #dadada;
-        border-bottom: none; }
+        border-bottom: none;
+        position: relative; }
         .projects .content-projects .project .project-img:hover img {
           filter: brightness(100%); }
+        .projects .content-projects .project .project-img:hover .project-links .links {
+          display: grid; }
         .projects .content-projects .project .project-img img {
           height: 150px;
           width: 100%;
@@ -250,6 +254,40 @@ nav {
           object-fit: cover;
           filter: brightness(95%);
           cursor: pointer; }
+          @media only screen and (max-width: 500px) {
+            .projects .content-projects .project .project-img img {
+              height: 100%; } }
+        .projects .content-projects .project .project-img .project-links .links {
+          position: absolute;
+          left: 50%;
+          top: 55%;
+          transform: translate(-50%, -50%);
+          display: none; }
+          .projects .content-projects .project .project-img .project-links .links.links--one {
+            grid-template-rows: 30px;
+            grid-template-columns: 100px; }
+          .projects .content-projects .project .project-img .project-links .links.links--two {
+            grid-template-rows: 30px 30px;
+            grid-template-columns: 100px;
+            row-gap: 4px; }
+          .projects .content-projects .project .project-img .project-links .links a {
+            background-color: white;
+            border-radius: 3px;
+            border: 1px solid #dadada;
+            line-height: 27px;
+            text-decoration: none;
+            text-align: center;
+            color: #111; }
+            .projects .content-projects .project .project-img .project-links .links a:hover {
+              background-color: #dadada; }
+            .projects .content-projects .project .project-img .project-links .links a span {
+              font-size: 12px; }
+            .projects .content-projects .project .project-img .project-links .links a img {
+              display: block;
+              width: 17px;
+              height: 17px;
+              float: left;
+              margin: 6px -10px 0 15px; }
       .projects .content-projects .project .project-title {
         line-height: 35px;
         padding: 0 0 0 10px;

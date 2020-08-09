@@ -18,6 +18,10 @@ var scss = "assets/img/devicons/sass.svg";
 var ruby = "assets/img/devicons/ruby.svg";
 var sinon = "assets/img/devicons/sinon.png";
 var pg = "assets/img/devicons/postgresql.svg";
+var redux = "assets/img/devicons/redux.svg";
+var github = "assets/img/devicons/github.svg";
+
+var play = "assets/img/play.png";
 
 var StackTech = function (_React$Component) {
     _inherits(StackTech, _React$Component);
@@ -91,6 +95,49 @@ var Project = function (_React$Component3) {
                 return React.createElement(ProjectTech, { tech: value });
             });
 
+            var hrefs = this.props.links;
+
+            if (this.props.links.length == 2) var links = React.createElement(
+                "div",
+                { className: "links links--two" },
+                React.createElement(
+                    "a",
+                    { href: hrefs[0] },
+                    React.createElement(
+                        "span",
+                        null,
+                        "demo"
+                    ),
+                    " ",
+                    React.createElement("img", { src: play })
+                ),
+                React.createElement(
+                    "a",
+                    { href: hrefs[1] },
+                    React.createElement(
+                        "span",
+                        null,
+                        "github"
+                    ),
+                    " ",
+                    React.createElement("img", { src: github })
+                )
+            );else if (this.props.links.length == 1) var links = React.createElement(
+                "div",
+                { className: "links links--one" },
+                React.createElement(
+                    "a",
+                    { href: hrefs[0] },
+                    React.createElement(
+                        "span",
+                        null,
+                        "demo"
+                    ),
+                    " ",
+                    React.createElement("img", { src: play })
+                )
+            );
+
             return React.createElement(
                 "div",
                 { className: "project" },
@@ -98,7 +145,11 @@ var Project = function (_React$Component3) {
                     "div",
                     { className: "project-img" },
                     React.createElement("img", { src: img, alt: "" }),
-                    React.createElement("div", { className: "project-links" })
+                    React.createElement(
+                        "div",
+                        { className: "project-links" },
+                        links
+                    )
                 ),
                 React.createElement(
                     "h5",
@@ -179,6 +230,7 @@ var Content = function (_React$Component4) {
                         React.createElement(StackTech, { tech: js, name: "Javascript" }),
                         React.createElement(StackTech, { tech: ruby, name: "Ruby" }),
                         React.createElement(StackTech, { tech: react, name: "React" }),
+                        React.createElement(StackTech, { tech: redux, name: "Redux" }),
                         React.createElement(StackTech, { tech: ror, name: "Rails" }),
                         React.createElement(StackTech, { tech: scss, name: "Scss" }),
                         React.createElement(StackTech, { tech: rspec, name: "Rspec" }),
@@ -208,8 +260,12 @@ var Content = function (_React$Component4) {
                     React.createElement(
                         "div",
                         { className: "content-projects" },
-                        React.createElement(Project, { img: "assets/img/projects/tiptopsite.png", name: "Tiptopsite.net", techs: [html, css, js, scss] }),
-                        React.createElement(Project, { img: "assets/img/projects/portfolio.png", name: "My Portfolio", techs: [html, scss, js, react] })
+                        React.createElement(Project, { links: ["https://tiptopsite.net/", "https://tiptopsite.net/"], img: "assets/img/projects/tiptopsite.png", name: "Tiptopsite.net", techs: [html, css, js, scss] }),
+                        React.createElement(Project, { links: ["https://tiptopsite.net/"], img: "assets/img/projects/portfolio.png", name: "My Portfolio", techs: [html, scss, js, react] }),
+                        React.createElement(Project, { links: ["https://tiptopsite.net/"], img: "assets/img/projects/portfolio.png", name: "Ruby Blackjack", techs: [ruby, rspec] }),
+                        React.createElement(Project, { links: ["https://tiptopsite.net/"], img: "assets/img/projects/portfolio.png", name: "Joker Flashcards", techs: [react, redux, jest, enzyme] }),
+                        React.createElement(Project, { links: ["https://tiptopsite.net/"], img: "assets/img/projects/portfolio.png", name: "Guess Game", techs: [react, redux, jest, enzyme, sinon] }),
+                        React.createElement(Project, { links: ["https://tiptopsite.net/"], img: "assets/img/projects/portfolio.png", name: "Interview Prep", techs: [ror, ruby, rspec, react] })
                     ),
                     React.createElement(
                         "h3",
@@ -217,7 +273,7 @@ var Content = function (_React$Component4) {
                         "Visit my ",
                         React.createElement(
                             "a",
-                            { href: "" },
+                            { target: "_blank", href: "https://github.com/babilonczyk" },
                             "github"
                         ),
                         " for more of my works."
@@ -250,13 +306,13 @@ var Content = function (_React$Component4) {
                             "Please start its title with \"[Portfolio] ...\"\u2003 or follow me on \u2003",
                             React.createElement(
                                 "a",
-                                { href: "" },
+                                { target: "_blank", href: "https://github.com/babilonczyk" },
                                 "github"
                             ),
                             "\u2003",
                             React.createElement(
                                 "a",
-                                { href: "" },
+                                { target: "_blank", href: "https://pl.linkedin.com/public-profile/in/jan-piotrzkowski-3a8789158" },
                                 "linkedin"
                             )
                         )
