@@ -19,6 +19,7 @@ import play from "./img/play.png";
 
 import p_tiptop from "./img/projects/tiptopsite.png";
 import p_portfolio from "./img/projects/portfolio.png";
+import p_planned from "./img/projects/planned.png";
 
 import background_img from "./img/img1.jpg";
 
@@ -112,7 +113,7 @@ var Project = function (_React$Component3) {
                     { className: 'links links--one' },
                     React.createElement(
                         'a',
-                        { href: hrefs[0] },
+                        { target: '_blank', href: hrefs[1] },
                         React.createElement(
                             'span',
                             null,
@@ -126,7 +127,7 @@ var Project = function (_React$Component3) {
                     { className: 'links links--one' },
                     React.createElement(
                         'a',
-                        { href: hrefs[1] },
+                        { target: '_blank', href: hrefs[0] },
                         React.createElement(
                             'span',
                             null,
@@ -140,7 +141,7 @@ var Project = function (_React$Component3) {
                     { className: 'links links--two' },
                     React.createElement(
                         'a',
-                        { href: hrefs[0] },
+                        { target: '_blank', href: hrefs[0] },
                         React.createElement(
                             'span',
                             null,
@@ -151,7 +152,7 @@ var Project = function (_React$Component3) {
                     ),
                     React.createElement(
                         'a',
-                        { href: hrefs[1] },
+                        { target: '_blank', href: hrefs[1] },
                         React.createElement(
                             'span',
                             null,
@@ -166,7 +167,7 @@ var Project = function (_React$Component3) {
                 { className: 'links links--one' },
                 React.createElement(
                     'a',
-                    { href: hrefs[0] },
+                    { target: '_blank', href: hrefs[0] },
                     React.createElement(
                         'span',
                         null,
@@ -305,10 +306,10 @@ var App = function (_React$Component4) {
                         { className: 'content-projects' },
                         React.createElement(Project, { links: ["https://tiptopsite.net/", "#"], img: p_tiptop, name: 'Tiptopsite.net', techs: [html, css, js, scss] }),
                         React.createElement(Project, { links: ["https://babilonczyk.github.io/react-portfolio/", "https://github.com/babilonczyk/react-portfolio"], img: p_portfolio, name: 'My Portfolio', techs: [html, scss, js, react] }),
-                        React.createElement(Project, { links: ["#", "https://github.com/babilonczyk/ruby-blackjack"], img: p_portfolio, name: 'Ruby Blackjack', techs: [ruby, rspec] }),
-                        React.createElement(Project, { links: ["https://tiptopsite.net/"], img: p_portfolio, name: 'Joker Flashcards', techs: [react, redux, jest, enzyme] }),
-                        React.createElement(Project, { links: ["https://tiptopsite.net/"], img: p_portfolio, name: 'Guess Game', techs: [react, redux, jest, enzyme, sinon] }),
-                        React.createElement(Project, { links: ["https://tiptopsite.net/"], img: p_portfolio, name: 'Interview Prep', techs: [ror, ruby, rspec, react] })
+                        React.createElement(Project, { links: ["#", "https://github.com/babilonczyk/ruby-blackjack"], img: p_planned, name: 'Ruby Blackjack', techs: [ruby, rspec] }),
+                        React.createElement(Project, { links: ["https://tiptopsite.net/", "asd"], img: p_planned, name: 'Joker Flashcards', techs: [react, redux, jest, enzyme] }),
+                        React.createElement(Project, { links: ["https://tiptopsite.net/", "asd"], img: p_planned, name: 'Guess Game', techs: [react, redux, jest, enzyme, sinon] }),
+                        React.createElement(Project, { links: ["https://tiptopsite.net/", "asd"], img: p_planned, name: 'Interview Prep', techs: [ror, ruby, rspec, react] })
                     ),
                     React.createElement(
                         'h3',

@@ -19,6 +19,7 @@ import play from "./img/play.png";
 
 import p_tiptop from "./img/projects/tiptopsite.png";
 import p_portfolio from "./img/projects/portfolio.png";
+import p_planned from "./img/projects/planned.png";
 
 import background_img from "./img/img1.jpg";
 
@@ -78,11 +79,11 @@ class Project extends React.Component {
         if(this.props.links.length === 2)
             if(hrefs[0] === '#')
                 links = <div className="links links--one"> 
-                            <a target="_blank"  href={hrefs[0]}><span>github</span> <img src={github}/></a>
+                            <a target="_blank"  href={hrefs[1]}><span>github</span> <img src={github}/></a>
                         </div>  
             else if(hrefs[1] === '#')
                 links = <div className="links links--one"> 
-                            <a target="_blank"  href={hrefs[1]}><span>demo</span> <img src={play}/></a>
+                            <a target="_blank"  href={hrefs[0]}><span>demo</span> <img src={play}/></a>
                         </div>  
             else
                 links = <div className="links links--two"> 
@@ -179,10 +180,10 @@ class App extends React.Component {
  
                             <Project links={["https://tiptopsite.net/", "#"]} img={p_tiptop} name="Tiptopsite.net" techs={[html, css, js, scss]}/>
                             <Project links={["https://babilonczyk.github.io/react-portfolio/", "https://github.com/babilonczyk/react-portfolio"]} img={p_portfolio} name="My Portfolio" techs={[html, scss, js, react]}/>
-                            <Project links={["#", "https://github.com/babilonczyk/ruby-blackjack"]} img={p_portfolio} name="Ruby Blackjack" techs={[ ruby, rspec]}/>
-                            <Project links={["https://tiptopsite.net/"]} img={p_portfolio} name="Joker Flashcards" techs={[react, redux, jest, enzyme]}/>
-                            <Project links={["https://tiptopsite.net/"]} img={p_portfolio} name="Guess Game" techs={[react, redux, jest, enzyme,sinon]}/>
-                            <Project links={["https://tiptopsite.net/"]} img={p_portfolio} name="Interview Prep" techs={[ror, ruby, rspec, react]}/>
+                            <Project links={["#", "https://github.com/babilonczyk/ruby-blackjack"]} img={p_planned} name="Ruby Blackjack" techs={[ ruby, rspec]}/>
+                            <Project links={["https://babilonczyk.github.io/react-portfolio/", "asd"]} img={p_planned} name="Joker Flashcards" techs={[react, redux, jest, enzyme]}/>
+                            <Project links={["https://babilonczyk.github.io/react-portfolio/", "asd"]} img={p_planned} name="Guess Game" techs={[react, redux, jest, enzyme,sinon]}/>
+                            <Project links={["https://babilonczyk.github.io/react-portfolio/", "asd"]} img={p_planned} name="Interview Prep" techs={[ror, ruby, rspec, react]}/>
  
                         </div>
  
