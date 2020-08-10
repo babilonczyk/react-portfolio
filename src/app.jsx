@@ -181,9 +181,9 @@ class App extends React.Component {
                             <Project links={["https://tiptopsite.net/", "#"]} img={p_tiptop} name="Tiptopsite.net" techs={[html, css, js, scss]}/>
                             <Project links={["https://babilonczyk.github.io/react-portfolio/", "https://github.com/babilonczyk/react-portfolio"]} img={p_portfolio} name="My Portfolio" techs={[html, scss, js, react]}/>
                             <Project links={["#", "https://github.com/babilonczyk/ruby-blackjack"]} img={p_planned} name="Ruby Blackjack" techs={[ ruby, rspec]}/>
-                            <Project links={["https://babilonczyk.github.io/react-portfolio/", "asd"]} img={p_planned} name="Joker Flashcards" techs={[react, redux, jest, enzyme]}/>
-                            <Project links={["https://babilonczyk.github.io/react-portfolio/", "asd"]} img={p_planned} name="Guess Game" techs={[react, redux, jest, enzyme,sinon]}/>
-                            <Project links={["https://babilonczyk.github.io/react-portfolio/", "asd"]} img={p_planned} name="Interview Prep" techs={[ror, ruby, rspec, react]}/>
+                            <Project links={["#", "https://babilonczyk.github.io/"]} img={p_planned} name="Joker Flashcards" techs={[react, redux, jest, enzyme]}/>
+                            <Project links={["#", "https://babilonczyk.github.io/"]} img={p_planned} name="Guess Game" techs={[react, redux, jest, enzyme,sinon]}/>
+                            <Project links={["#", "https://babilonczyk.github.io/"]} img={p_planned} name="Interview Prep" techs={[ror, ruby, rspec, react]}/>
  
                         </div>
  

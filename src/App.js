@@ -307,9 +307,9 @@ var App = function (_React$Component4) {
                         React.createElement(Project, { links: ["https://tiptopsite.net/", "#"], img: p_tiptop, name: 'Tiptopsite.net', techs: [html, css, js, scss] }),
                         React.createElement(Project, { links: ["https://babilonczyk.github.io/react-portfolio/", "https://github.com/babilonczyk/react-portfolio"], img: p_portfolio, name: 'My Portfolio', techs: [html, scss, js, react] }),
                         React.createElement(Project, { links: ["#", "https://github.com/babilonczyk/ruby-blackjack"], img: p_planned, name: 'Ruby Blackjack', techs: [ruby, rspec] }),
-                        React.createElement(Project, { links: ["https://tiptopsite.net/", "asd"], img: p_planned, name: 'Joker Flashcards', techs: [react, redux, jest, enzyme] }),
-                        React.createElement(Project, { links: ["https://tiptopsite.net/", "asd"], img: p_planned, name: 'Guess Game', techs: [react, redux, jest, enzyme, sinon] }),
-                        React.createElement(Project, { links: ["https://tiptopsite.net/", "asd"], img: p_planned, name: 'Interview Prep', techs: [ror, ruby, rspec, react] })
+                        React.createElement(Project, { links: ["#", "https://babilonczyk.github.io/"], img: p_planned, name: 'Joker Flashcards', techs: [react, redux, jest, enzyme] }),
+                        React.createElement(Project, { links: ["#", "https://babilonczyk.github.io/"], img: p_planned, name: 'Guess Game', techs: [react, redux, jest, enzyme, sinon] }),
+                        React.createElement(Project, { links: ["#", "https://babilonczyk.github.io/"], img: p_planned, name: 'Interview Prep', techs: [ror, ruby, rspec, react] })
                     ),
                     React.createElement(
                         'h3',
