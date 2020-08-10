@@ -82,17 +82,17 @@ nav {
   height: auto;
   background-color: #fff;
   width: calc(100%-80px);
-  padding: 0 20px; }
+  padding: 0 40px; }
   .techs p {
     margin: 15px auto 20px auto;
     max-width: 800px;
-    width: calc(100% - 40px);
+    width: 100%;
     font-size: 13px; }
   .techs .content-techs {
     display: block;
     margin: 15px auto 0 auto;
     max-width: 800px;
-    width: calc(100% - 40px);
+    width: 100%;
     background-color: cornsilk;
     clear: both; }
     .techs .content-techs .tech {
@@ -179,12 +179,12 @@ nav {
   height: auto;
   background-color: #fff;
   width: calc(100%-80px);
-  padding: 0 20px; }
+  padding: 0 40px; }
   .about .content-about {
     display: block;
     margin: 15px auto 0 auto;
     max-width: 760px;
-    width: calc(100% - 80px);
+    width: calc(100% - 40px);
     height: auto;
     padding: 20px 20px;
     font-weight: 200;

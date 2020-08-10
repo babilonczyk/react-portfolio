@@ -76,13 +76,22 @@ class Project extends React.Component {
         let links;
 
         if(this.props.links.length === 2)
-            links = <div className="links links--two"> 
-                        <a href={hrefs[0]}><span>demo</span> <img src={play}/></a>
-                        <a href={hrefs[1]}><span>github</span> <img src={github}/></a>
-                    </div>
+            if(hrefs[0] === '#')
+                links = <div className="links links--one"> 
+                            <a target="_blank"  href={hrefs[0]}><span>github</span> <img src={github}/></a>
+                        </div>  
+            else if(hrefs[1] === '#')
+                links = <div className="links links--one"> 
+                            <a target="_blank"  href={hrefs[1]}><span>demo</span> <img src={play}/></a>
+                        </div>  
+            else
+                links = <div className="links links--two"> 
+                            <a target="_blank"  href={hrefs[0]}><span>demo</span> <img src={play}/></a>
+                            <a target="_blank"  href={hrefs[1]}><span>github</span> <img src={github}/></a>
+                        </div>
         else if (this.props.links.length === 1)
             links = <div className="links links--one"> 
-                        <a href={hrefs[0]}><span>demo</span> <img src={play}/></a>
+                        <a target="_blank"  href={hrefs[0]}><span>demo</span> <img src={play}/></a>
                     </div>
          
          
@@ -168,9 +177,9 @@ class App extends React.Component {
 
                         <div className="content-projects">
  
-                            <Project links={["https://tiptopsite.net/", "https://tiptopsite.net/"]} img={p_tiptop} name="Tiptopsite.net" techs={[html, css, js, scss]}/>
-                            <Project links={["https://tiptopsite.net/"]} img={p_portfolio} name="My Portfolio" techs={[html, scss, js, react]}/>
-                            <Project links={["https://tiptopsite.net/"]} img={p_portfolio} name="Ruby Blackjack" techs={[ ruby, rspec]}/>
+                            <Project links={["https://tiptopsite.net/", "#"]} img={p_tiptop} name="Tiptopsite.net" techs={[html, css, js, scss]}/>
+                            <Project links={["https://babilonczyk.github.io/react-portfolio/", "https://github.com/babilonczyk/react-portfolio"]} img={p_portfolio} name="My Portfolio" techs={[html, scss, js, react]}/>
+                            <Project links={["#", "https://github.com/babilonczyk/ruby-blackjack"]} img={p_portfolio} name="Ruby Blackjack" techs={[ ruby, rspec]}/>
                             <Project links={["https://tiptopsite.net/"]} img={p_portfolio} name="Joker Flashcards" techs={[react, redux, jest, enzyme]}/>
                             <Project links={["https://tiptopsite.net/"]} img={p_portfolio} name="Guess Game" techs={[react, redux, jest, enzyme,sinon]}/>
                             <Project links={["https://tiptopsite.net/"]} img={p_portfolio} name="Interview Prep" techs={[ror, ruby, rspec, react]}/>

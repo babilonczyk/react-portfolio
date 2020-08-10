@@ -22,6 +22,7 @@ import p_portfolio from "./img/projects/portfolio.png";
 
 import background_img from "./img/img1.jpg";
 
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -105,32 +106,62 @@ var Project = function (_React$Component3) {
             var hrefs = this.props.links;
             var links = void 0;
 
-            if (this.props.links.length === 2) links = React.createElement(
-                'div',
-                { className: 'links links--two' },
-                React.createElement(
-                    'a',
-                    { href: hrefs[0] },
+            if (this.props.links.length === 2) {
+                if (hrefs[0] === '#') links = React.createElement(
+                    'div',
+                    { className: 'links links--one' },
                     React.createElement(
-                        'span',
-                        null,
-                        'demo'
-                    ),
-                    ' ',
-                    React.createElement('img', { src: play })
-                ),
-                React.createElement(
-                    'a',
-                    { href: hrefs[1] },
+                        'a',
+                        { href: hrefs[0] },
+                        React.createElement(
+                            'span',
+                            null,
+                            'github'
+                        ),
+                        ' ',
+                        React.createElement('img', { src: github })
+                    )
+                );else if (hrefs[1] === '#') links = React.createElement(
+                    'div',
+                    { className: 'links links--one' },
                     React.createElement(
-                        'span',
-                        null,
-                        'github'
+                        'a',
+                        { href: hrefs[1] },
+                        React.createElement(
+                            'span',
+                            null,
+                            'demo'
+                        ),
+                        ' ',
+                        React.createElement('img', { src: play })
+                    )
+                );else links = React.createElement(
+                    'div',
+                    { className: 'links links--two' },
+                    React.createElement(
+                        'a',
+                        { href: hrefs[0] },
+                        React.createElement(
+                            'span',
+                            null,
+                            'demo'
+                        ),
+                        ' ',
+                        React.createElement('img', { src: play })
                     ),
-                    ' ',
-                    React.createElement('img', { src: github })
-                )
-            );else if (this.props.links.length === 1) links = React.createElement(
+                    React.createElement(
+                        'a',
+                        { href: hrefs[1] },
+                        React.createElement(
+                            'span',
+                            null,
+                            'github'
+                        ),
+                        ' ',
+                        React.createElement('img', { src: github })
+                    )
+                );
+            } else if (this.props.links.length === 1) links = React.createElement(
                 'div',
                 { className: 'links links--one' },
                 React.createElement(
@@ -272,9 +303,9 @@ var App = function (_React$Component4) {
                     React.createElement(
                         'div',
                         { className: 'content-projects' },
-                        React.createElement(Project, { links: ["https://tiptopsite.net/", "https://tiptopsite.net/"], img: p_tiptop, name: 'Tiptopsite.net', techs: [html, css, js, scss] }),
-                        React.createElement(Project, { links: ["https://tiptopsite.net/"], img: p_portfolio, name: 'My Portfolio', techs: [html, scss, js, react] }),
-                        React.createElement(Project, { links: ["https://tiptopsite.net/"], img: p_portfolio, name: 'Ruby Blackjack', techs: [ruby, rspec] }),
+                        React.createElement(Project, { links: ["https://tiptopsite.net/", "#"], img: p_tiptop, name: 'Tiptopsite.net', techs: [html, css, js, scss] }),
+                        React.createElement(Project, { links: ["https://babilonczyk.github.io/react-portfolio/", "https://github.com/babilonczyk/react-portfolio"], img: p_portfolio, name: 'My Portfolio', techs: [html, scss, js, react] }),
+                        React.createElement(Project, { links: ["#", "https://github.com/babilonczyk/ruby-blackjack"], img: p_portfolio, name: 'Ruby Blackjack', techs: [ruby, rspec] }),
                         React.createElement(Project, { links: ["https://tiptopsite.net/"], img: p_portfolio, name: 'Joker Flashcards', techs: [react, redux, jest, enzyme] }),
                         React.createElement(Project, { links: ["https://tiptopsite.net/"], img: p_portfolio, name: 'Guess Game', techs: [react, redux, jest, enzyme, sinon] }),
                         React.createElement(Project, { links: ["https://tiptopsite.net/"], img: p_portfolio, name: 'Interview Prep', techs: [ror, ruby, rspec, react] })
