@@ -1,27 +1,27 @@
 import React from 'react';
-import './css/main.css';
+import './static/css/main.css';
 
-import html from "./img/devicons/html.svg";
-import css from "./img/devicons/css3.svg";   
-import enzyme from "./img/devicons/enzyme.png";
-import jest from "./img/devicons/jest.svg";
-import js from "./img/devicons/js.svg";
-import react from "./img/devicons/react-native.svg";
-import ror from "./img/devicons/ror.png";
-import rspec from "./img/devicons/rpsec.png";
-import scss from "./img/devicons/sass.svg";
-import ruby from "./img/devicons/ruby.svg"; 
-import sinon from "./img/devicons/sinon.png"; 
-import pg from "./img/devicons/postgresql.svg";
-import redux from "./img/devicons/redux.svg";
-import github from "./img/devicons/github.svg";
-import play from "./img/play.png";
+import html from "./static/img/devicons/html.svg";
+import css from "./static/img/devicons/css3.svg";   
+import enzyme from "./static/img/devicons/enzyme.png";
+import jest from "./static/img/devicons/jest.svg";
+import js from "./static/img/devicons/js.svg";
+import react from "./static/img/devicons/react-native.svg";
+import ror from "./static/img/devicons/ror.png";
+import rspec from "./static/img/devicons/rpsec.png";
+import scss from "./static/img/devicons/sass.svg";
+import ruby from "./static/img/devicons/ruby.svg"; 
+import sinon from "./static/img/devicons/sinon.png"; 
+import pg from "./static/img/devicons/postgresql.svg";
+import redux from "./static/img/devicons/redux.svg";
+import github from "./static/img/devicons/github.svg";
+import play from "./static/img/play.png";
 
-import p_tiptop from "./img/projects/tiptopsite.png";
-import p_portfolio from "./img/projects/portfolio.png";
-import p_planned from "./img/projects/planned.png";
+import p_tiptop from "./static/img/projects/tiptopsite.png";
+import p_portfolio from "./static/img/projects/portfolio.png";
+import p_planned from "./static/img/projects/planned.png";
 
-import background_img from "./img/img1.jpg";
+import background_img from "./static/img/img1.jpg";
 
 
 
@@ -77,7 +77,10 @@ class Project extends React.Component {
         let links;
 
         if(this.props.links.length === 2)
-            if(hrefs[0] === '#')
+            if(hrefs[0] === '#' && hrefs[1] === '#')
+                links = <div className="links links--one"> 
+                        </div> 
+            else if(hrefs[0] === '#')
                 links = <div className="links links--one"> 
                             <a target="_blank"  href={hrefs[1]}><span>github</span> <img src={github}/></a>
                         </div>  
@@ -141,7 +144,7 @@ class App extends React.Component {
 
                     <section className="about">
 
-                        <p className="content-about">I'm a young web developer looking for challenging projects that could broaden my horizons, as well as, sharpen my skillset. Energy drinks and coffee gives me power to do unachievable things. Do you want to work with a motivated young individual? Reach out to me. 📧</p>
+                        <p className="content-about">I'm a web developer looking for challenging projects that could broaden my horizons, as well as, sharpen my skillset. Energy drinks and coffee gives me power to do unachievable things. Do you want to work with a motivated young individual? Reach out to me. 📧</p>
 
                     </section>
 
@@ -181,9 +184,9 @@ class App extends React.Component {
                             <Project links={["https://tiptopsite.net/", "#"]} img={p_tiptop} name="Tiptopsite.net" techs={[html, css, js, scss]}/>
                             <Project links={["https://babilonczyk.github.io/react-portfolio/", "https://github.com/babilonczyk/react-portfolio"]} img={p_portfolio} name="My Portfolio" techs={[html, scss, js, react]}/>
                             <Project links={["#", "https://github.com/babilonczyk/ruby-blackjack"]} img={p_planned} name="Ruby Blackjack" techs={[ ruby, rspec]}/>
-                            <Project links={["#", "https://babilonczyk.github.io/"]} img={p_planned} name="Joker Flashcards" techs={[react, redux, jest, enzyme]}/>
-                            <Project links={["#", "https://babilonczyk.github.io/"]} img={p_planned} name="Guess Game" techs={[react, redux, jest, enzyme,sinon]}/>
-                            <Project links={["#", "https://babilonczyk.github.io/"]} img={p_planned} name="Interview Prep" techs={[ror, ruby, rspec, react]}/>
+                            <Project links={["#", "#"]} img={p_planned} name="Joker Flashcards" techs={[react, redux, jest, enzyme]}/>
+                            <Project links={["#", "#"]} img={p_planned} name="Guess Game" techs={[react, redux, jest, enzyme,sinon]}/>
+                            <Project links={["#", "#"]} img={p_planned} name="Interview Prep" techs={[ror, ruby, rspec, react]}/>
  
                         </div>
  

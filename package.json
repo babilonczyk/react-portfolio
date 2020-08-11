@@ -7,7 +7,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    ":scss": "node-sass --watch src/scss/ -o src/css/",
+    ":scss": "node-sass --watch src/static/scss/ -o src/static/css/",
     ":babel": "npx babel --watch src --out-dir src --presets react-app/prod",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
