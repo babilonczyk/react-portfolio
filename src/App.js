@@ -31,6 +31,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+
 var StackTech = function (_React$Component) {
     _inherits(StackTech, _React$Component);
 
@@ -107,7 +108,7 @@ var Project = function (_React$Component3) {
             var links = void 0;
 
             if (this.props.links.length === 2) {
-                if (hrefs[0] === '#' && hrefs[1] === '#') links = React.createElement('div', { className: 'links links--one' });else if (hrefs[0] === '#') links = React.createElement(
+                if (hrefs[0] === '#' && hrefs[1] === '#') links = React.createElement('div', null);else if (hrefs[0] === '#') links = React.createElement(
                     'div',
                     { className: 'links links--one' },
                     React.createElement(
@@ -306,9 +307,7 @@ var App = function (_React$Component4) {
                         React.createElement(Project, { links: ["https://tiptopsite.net/", "#"], img: p_tiptop, name: 'Tiptopsite.net', techs: [html, css, js, scss] }),
                         React.createElement(Project, { links: ["https://babilonczyk.github.io/react-portfolio/", "https://github.com/babilonczyk/react-portfolio"], img: p_portfolio, name: 'My Portfolio', techs: [html, scss, js, react] }),
                         React.createElement(Project, { links: ["#", "https://github.com/babilonczyk/ruby-blackjack"], img: p_planned, name: 'Ruby Blackjack', techs: [ruby, rspec] }),
-                        React.createElement(Project, { links: ["#", "#"], img: p_planned, name: 'Joker Flashcards', techs: [react, redux, jest, enzyme] }),
-                        React.createElement(Project, { links: ["#", "#"], img: p_planned, name: 'Guess Game', techs: [react, redux, jest, enzyme, sinon] }),
-                        React.createElement(Project, { links: ["#", "#"], img: p_planned, name: 'Interview Prep', techs: [ror, ruby, rspec, react] })
+                        React.createElement(Project, { links: ["#", "https://github.com/babilonczyk/react-flashcards"], img: p_planned, name: 'React Flashcards', techs: [react, redux, jest, enzyme] })
                     ),
                     React.createElement(
                         'h3',
