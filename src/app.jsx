@@ -78,9 +78,8 @@ class Project extends React.Component {
 
         if(this.props.links.length === 2)
             if(hrefs[0] === '#' && hrefs[1] === '#')
-                links = <div className="links links--one"> 
-                        </div> 
-            else if(hrefs[0] === '#')
+                links = <div></div> 
+            else if(hrefs[0] === '#' )
                 links = <div className="links links--one"> 
                             <a target="_blank"  href={hrefs[1]}><span>github</span> <img src={github}/></a>
                         </div>  
