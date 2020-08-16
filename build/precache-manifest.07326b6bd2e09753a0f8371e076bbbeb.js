@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "00ca4d5c82ca59eeff6832761c7039af",
+    "revision": "d16d53e49e89cdb11f1c8fd15f02c389",
     "url": "/react-portfolio/index.html"
   },
   {
-    "revision": "ab846831666b3dda7224",
+    "revision": "8412476f037637c4dda2",
     "url": "/react-portfolio/static/css/main.a2cfe071.chunk.css"
   },
   {
@@ -16,16 +16,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-portfolio/static/js/2.500a54b8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ab846831666b3dda7224",
-    "url": "/react-portfolio/static/js/main.af389a41.chunk.js"
+    "revision": "8412476f037637c4dda2",
+    "url": "/react-portfolio/static/js/main.8ba11780.chunk.js"
   },
   {
     "revision": "7c02595f886466fd3e1b",
     "url": "/react-portfolio/static/js/runtime-main.f8075730.js"
   },
   {
-    "revision": "fcea91b89373cdea6f7a8242f4e69705",
-    "url": "/react-portfolio/static/media/blackjack.fcea91b8.png"
+    "revision": "a4eab60762e9556eedfb95b8290b2df8",
+    "url": "/react-portfolio/static/media/blackjack.a4eab607.png"
   },
   {
     "revision": "ae541b8bf201dcac450db43e165a2acd",
