@@ -19,9 +19,11 @@ import play from "./static/img/play.png";
 
 import p_tiptop from "./static/img/projects/tiptopsite.png";
 import p_portfolio from "./static/img/projects/portfolio.png";
+import p_blackjack from "./static/img/projects/blackjack.png";
 import p_planned from "./static/img/projects/planned.png";
 
 import background_img from "./static/img/img1.jpg";
+
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -30,7 +32,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
 
 var StackTech = function (_React$Component) {
     _inherits(StackTech, _React$Component);
@@ -280,7 +281,6 @@ var App = function (_React$Component4) {
                         React.createElement(StackTech, { tech: rspec, name: 'Rspec' }),
                         React.createElement(StackTech, { tech: jest, name: 'Jest' }),
                         React.createElement(StackTech, { tech: enzyme, name: 'Enzyme' }),
-                        React.createElement(StackTech, { tech: sinon, name: 'Sinon' }),
                         React.createElement(StackTech, { tech: pg, name: 'Postgresql' })
                     )
                 ),
@@ -306,7 +306,7 @@ var App = function (_React$Component4) {
                         { className: 'content-projects' },
                         React.createElement(Project, { links: ["https://tiptopsite.net/", "#"], img: p_tiptop, name: 'Tiptopsite.net', techs: [html, css, js, scss] }),
                         React.createElement(Project, { links: ["https://babilonczyk.github.io/react-portfolio/", "https://github.com/babilonczyk/react-portfolio"], img: p_portfolio, name: 'My Portfolio', techs: [html, scss, js, react] }),
-                        React.createElement(Project, { links: ["#", "https://github.com/babilonczyk/ruby-blackjack"], img: p_planned, name: 'Ruby Blackjack', techs: [ruby, rspec] }),
+                        React.createElement(Project, { links: ["#", "https://github.com/babilonczyk/ruby-blackjack"], img: p_blackjack, name: 'Ruby Blackjack', techs: [ruby, rspec] }),
                         React.createElement(Project, { links: ["#", "https://github.com/babilonczyk/react-flashcards"], img: p_planned, name: 'React Flashcards', techs: [react, redux, jest, enzyme] })
                     ),
                     React.createElement(

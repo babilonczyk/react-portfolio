@@ -19,10 +19,11 @@ import play from "./static/img/play.png";
 
 import p_tiptop from "./static/img/projects/tiptopsite.png";
 import p_portfolio from "./static/img/projects/portfolio.png";
+import p_blackjack from "./static/img/projects/blackjack.png";
 import p_planned from "./static/img/projects/planned.png";
-
+ 
 import background_img from "./static/img/img1.jpg";
-
+ 
 
 
 class StackTech extends React.Component { 
@@ -166,7 +167,6 @@ class App extends React.Component {
                             <StackTech tech={rspec} name="Rspec" />
                             <StackTech tech={jest} name="Jest" />
                             <StackTech tech={enzyme} name="Enzyme" /> 
-                            <StackTech tech={sinon} name="Sinon" />
                             <StackTech tech={pg} name="Postgresql" />
 
                         </div>
@@ -182,7 +182,7 @@ class App extends React.Component {
  
                             <Project links={["https://tiptopsite.net/", "#"]} img={p_tiptop} name="Tiptopsite.net" techs={[html, css, js, scss]}/>
                             <Project links={["https://babilonczyk.github.io/react-portfolio/", "https://github.com/babilonczyk/react-portfolio"]} img={p_portfolio} name="My Portfolio" techs={[html, scss, js, react]}/>
-                            <Project links={["#", "https://github.com/babilonczyk/ruby-blackjack"]} img={p_planned} name="Ruby Blackjack" techs={[ ruby, rspec]}/>
+                            <Project links={["#", "https://github.com/babilonczyk/ruby-blackjack"]} img={p_blackjack} name="Ruby Blackjack" techs={[ ruby, rspec]}/>
                             <Project links={["#", "https://github.com/babilonczyk/react-flashcards"]} img={p_planned} name="React Flashcards" techs={[react, redux, jest, enzyme]}/> 
                         </div>
  
