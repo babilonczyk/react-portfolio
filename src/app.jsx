@@ -184,6 +184,8 @@ class App extends React.Component {
                             <Project links={["https://babilonczyk.github.io/react-portfolio/", "https://github.com/babilonczyk/react-portfolio"]} img={p_portfolio} name="My Portfolio" techs={[html, scss, js, react]}/>
                             <Project links={["#", "https://github.com/babilonczyk/ruby-blackjack"]} img={p_blackjack} name="Ruby Blackjack" techs={[ ruby, rspec]}/>
                             <Project links={["#", "https://github.com/babilonczyk/react-flashcards"]} img={p_planned} name="React Flashcards" techs={[react, redux, jest, enzyme]}/> 
+                            <Project links={["https://justjoin.space/", "#"]} img={p_planned} name="justjoin.space" techs={[ruby, ror]}/> 
+
                         </div>
  
                         <h3>Visit my <a target="_blank" href="https://github.com/babilonczyk">github</a> for more of my works.</h3>
